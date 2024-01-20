@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(image1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    border: 2px solid black;
+    height: 60vmin;
+    width: 50vmin;
+    border-radius: 2vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2),  0 0 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;  
+}
+form h2{
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 4vmin;
+}
+.inputbox{
+    margin: 6vmin 0 0;
+    position: relative;
+}
+.inputbox input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    width: 100%;
+}
+.inputbox label{
+    font-weight: 600;
+    letter-spacing: 0.1vmin;
+    position: absolute;
+    left: 0;
+    top:0vmin;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    font-size: 2.2vmin;
+}
+.inputbox i{
+    position: absolute;
+    right: 2vmin;
+    font-size: 2.2vmin;
+}
+
+.inputbox input:focus~label,
+.inputbox input:valid~label{
+    top: -3vmin;
+}
+
+.forgetpassword{
+    display: flex;
+   justify-content: space-between;
+    font-size: 1.8vmin;
+    align-items: center;
+    font-weight: 700;
+    margin-top: 4vmin;
+}
+.forgetpassword input{
+    accent-color:#11515d;
+    cursor: pointer;
+}
+.forgetpassword a{
+    text-decoration: none;
+    color: black;
+}
+.forgetpassword a:hover{
+    color:white;
+}
+.btn{
+    margin: 2vmin 0;
+    width: 100%;
+    padding: 1vmin 0;
+    border-radius: 4vmin;
+    outline: none;
+    border: none;
+    font-size: 2.5vmin;
+    font-weight: bolder;
+}
+.btn:hover{
+    background-color: rgb(241, 186, 84);
+    cursor: pointer;
+    color: white;
+}
+.accountcreate{
+    display: flex;
+    font-size: 2vmin;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: 2vmin;
+}
+.accountcreate a{
+    text-decoration: none;
+    color: black;
+    margin-left:1vmin;
+}
+.accountcreate a:hover{
+    color: white;
+    text-decoration:dashed;
+}
+
+
+.formbox{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+form{
+    width:90%;
+    transition: all 0.5s ease-in-out;
+}
+.login{
+    position: absolute;
+}
+
+.register{
+    transform: translateX(50vmin);
+}
+
+.moveloginleft{
+    transform: translateX(-50vmin);
+}
+.moveregisterleft{
+    transform: translateX(0);
+}
+
+
+/* -----------------MEDIAQUERIES--------------- */
+@media (max-width:450px){
+    .container{
+        border: 2px solid black;
+        height:100svh;
+        width: 100%;
+        backdrop-filter: none;  
+    }
+    .register{
+        transform: translateX(55vmax);
+    }
+    
+    .moveloginleft{
+        transform: translateX(-55vmax);
+    }
+    .moveregisterleft{
+        transform: translateX(0);
+    }
+    form h2{
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: 5vmax;
+    }
+    .inputbox{
+        margin: 8vmax 0 0;
+        position: relative;
+    }
+    .inputbox input{
+        font-size: 2.2vmax;
+        font-weight:bold;
+    }
+    .inputbox label{
+        font-weight: 700;
+        letter-spacing: 0.3vmax;
+        font-size: 2.5vmax;
+        top: -1vmax;
+    }
+    .inputbox i{
+        position: absolute;
+        right:3vmax;
+        font-size: 2.5vmax;
+        top: -1vmax;
+    }
+    .inputbox input:focus~label,
+    .inputbox input:valid~label{
+    top: -3vmax;
+}
+    .forgetpassword{
+        font-size:2vmax;
+        margin-top: 4vmax;
+    }
+    .btn{
+        margin-top: 3vmax;
+        width: 100%;
+        padding: 1.5vmax 0;
+        border-radius: 4vmax;
+        font-size: 2.5vmax;
+        font-weight: bolder;
+    }
+    .accountcreate{
+        display: flex;
+        font-size: 2vmax;
+        justify-content: center;
+        font-weight: 700;
+        margin-top: 2vmin;
+    }
+
+}
